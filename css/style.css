@@ -10,8 +10,8 @@
 .search-box {
    margin-top: 2em;
    margin-bottom: 2em;
-
 }
+
 input {
    display: block;
    margin: auto;
@@ -32,6 +32,14 @@ input {
    margin: auto;
 }
 
+/* OVERRIDE LIGHTBOX OVERLAY
+   ON SMALL SCREENS for EXCEEDS */
+.lb-data .lb-caption {
+   font-size: 1em;
+   font-weight: bold;
+   line-height: 1.5em;
+}
+
 /* MEDIA QUERIES =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 @media (min-width: 768px) {
    .photo-gallery {
@@ -48,9 +56,12 @@ input {
       padding: 0.5em;
    }
 
-   /* OVERRIDE LIGHTBOX OVERLAY */
-   .lightbox .lb-image {
-      border: 4px solid #333 !important;
+   /* RESIZE OVERLAT TEXT ON
+   LARGER SCREENS */
+   .lb-data .lb-caption {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1em;
    }
 }
 
@@ -61,11 +72,7 @@ input {
    }
 
    input {
-      display: block;
       margin-left: 33%;
       width: 45%;
-      max-width: 800px;
-      font-size: 1em;
-      padding: 0.5em;
    }
 }
